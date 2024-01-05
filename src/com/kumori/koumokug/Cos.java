@@ -21,30 +21,30 @@ public class Cos {
 		
 		String region = "ap-beijing";
 
-		// ´´½¨ CosXmlServiceConfig ¶ÔÏó£¬¸ù¾İĞèÒªĞŞ¸ÄÄ¬ÈÏµÄÅäÖÃ²ÎÊı
+		// åˆ›å»º CosXmlServiceConfig å¯¹è±¡ï¼Œæ ¹æ®éœ€è¦ä¿®æ”¹é»˜è®¤çš„é…ç½®å‚æ•°
 		CosXmlServiceConfig serviceConfig = new CosXmlServiceConfig.Builder().setRegion(region).isHttps(true).builder();
 
-		String secretId = "AKIDmLekaBhLuDzZv1oUmpdkeJirkPq3rkDQ"; // ÓÀ¾ÃÃÜÔ¿ secretId
-		String secretKey = "6wXuKTNDn7BDI1Vx7QWLuEI6duwjGWzD"; // ÓÀ¾ÃÃÜÔ¿ secretKey
+		String secretId = ""; // æ°¸ä¹…å¯†é’¥ secretId
+		String secretKey = ""; // æ°¸ä¹…å¯†é’¥ secretKey
 
-		// ³õÊ¼»¯ {@link QCloudCredentialProvider} ¶ÔÏó£¬À´¸ø SDK Ìá¹©ÁÙÊ±ÃÜÔ¿
-		// keyDuration ÃÜÔ¿ÓĞĞ§ÆÚ£¬µ¥Î»ÎªÃë
+		// åˆå§‹åŒ– {@link QCloudCredentialProvider} å¯¹è±¡ï¼Œæ¥ç»™ SDK æä¾›ä¸´æ—¶å¯†é’¥
+		// keyDuration å¯†é’¥æœ‰æ•ˆæœŸï¼Œå•ä½ä¸ºç§’
 		
 		QCloudCredentialProvider credentialProvider = new ShortTimeCredentialProvider(secretId, secretKey, 300);
 
 		CosXmlService cosXmlService = new CosXmlService(context, serviceConfig, credentialProvider);
 
-		// ³õÊ¼»¯ TransferConfig
+		// åˆå§‹åŒ– TransferConfig
 		TransferConfig transferConfig = new TransferConfig.Builder().build();
 
-		// ³õÊ¼»¯ TransferManager
+		// åˆå§‹åŒ– TransferManager
 		TransferManager transferManager = new TransferManager(cosXmlService, transferConfig);
 
-		String bucket = "test-1300909478"; // ´æ´¢Í°£¬¸ñÊ½£ºBucketName-APPID
-		String cosPath = f; // ¶ÔÏóÔÚ´æ´¢Í°ÖĞµÄÎ»ÖÃ±êÊ¶·û£¬¼´³Æ¶ÔÏó¼ü
-		String srcPath = file.toString(); // ±¾µØÎÄ¼şµÄ¾ø¶ÔÂ·¾¶
-		String uploadId = null; // Èô´æÔÚ³õÊ¼»¯·Ö¿éÉÏ´«µÄ UploadId£¬Ôò¸³Öµ¶ÔÓ¦µÄ uploadId ÖµÓÃÓÚĞø´«£»·ñÔò£¬¸³Öµ null
-		// ÉÏ´«¶ÔÏó
+		String bucket = "test-1300909478"; // å­˜å‚¨æ¡¶ï¼Œæ ¼å¼ï¼šBucketName-APPID
+		String cosPath = f; // å¯¹è±¡åœ¨å­˜å‚¨æ¡¶ä¸­çš„ä½ç½®æ ‡è¯†ç¬¦ï¼Œå³ç§°å¯¹è±¡é”®
+		String srcPath = file.toString(); // æœ¬åœ°æ–‡ä»¶çš„ç»å¯¹è·¯å¾„
+		String uploadId = null; // è‹¥å­˜åœ¨åˆå§‹åŒ–åˆ†å—ä¸Šä¼ çš„ UploadIdï¼Œåˆ™èµ‹å€¼å¯¹åº”çš„ uploadId å€¼ç”¨äºç»­ä¼ ï¼›å¦åˆ™ï¼Œèµ‹å€¼ null
+		// ä¸Šä¼ å¯¹è±¡
 		COSXMLUploadTask cosxmlUploadTask = transferManager.upload(bucket, cosPath, srcPath, uploadId);
 	}
 }
