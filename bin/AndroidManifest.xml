@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kumori.koumokug"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="テ形学習用ゲーム"
+        android:screenOrientation="landscape"
+        android:theme="@style/NoTitle" >
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            android:label="テ形学習用ゲーム" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kumori.koumokug.GameActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="游戏"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitle" >
+        </activity>
+        
+        <activity
+            android:name="com.kumori.koumokug.OwariActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="游戏结束"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitle" >
+        </activity>
+        
+        
+        <activity
+            android:name="com.kumori.koumokug.StudyActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="学习"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitle" >
+        </activity>
+        
+        <activity
+            android:name="com.kumori.koumokug.TesutoMae"
+            android:icon="@drawable/ic_launcher"
+            android:label="进入测验"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" >
+        </activity>
+        
+        <activity
+            android:name="com.kumori.koumokug.TesutoActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="测验"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" >
+        </activity>
+        
+    </application>
+
+</manifest>
