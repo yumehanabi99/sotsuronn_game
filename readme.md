@@ -15,8 +15,8 @@
 
 https://github.com/yumehanabi99/sotsuronn_game/assets/155726759/e5ddc875-586e-46a2-98b8-b8e859cfbd1f  
 
-其中最重要的代码部分是koumokug\src\com\kumori\koumokugのGameActivity.java，该代码是打地鼠实现。
-中に最も重要な部分は、koumokug\src\com\kumori\koumokugのGameActivity.javaというファイルがもぐら叩きを実現したソースコードです。
+其中最重要的代码部分是koumokug\src\com\kumori\koumokugのGameActivity.java，该代码是打地鼠实现。    
+中に最も重要な部分は、koumokug\src\com\kumori\koumokugのGameActivity.javaというファイルがもぐら叩きを実現したソースコードです。    
 导出的apk可点击右侧链接下载。https://github.com/yumehanabi99/sotsuronn_game/blob/master/README%E7%94%A8/%E5%8D%92%E8%AB%96%E7%94%A8%EF%BC%88%E3%82%B2%E3%83%BC%E3%83%A0%E5%BC%8F%EF%BC%89.apk    
 
 exportしたアプリはhttps://github.com/yumehanabi99/sotsuronn_game/blob/master/README%E7%94%A8/%E5%8D%92%E8%AB%96%E7%94%A8%EF%BC%88%E3%82%B2%E3%83%BC%E3%83%A0%E5%BC%8F%EF%BC%89.apk  
